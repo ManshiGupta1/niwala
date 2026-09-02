@@ -11,8 +11,8 @@
  */
 
 const NIWALA_CONFIG = {
-  SUPABASE_URL: 'YOUR_SUPABASE_PROJECT_URL', // e.g. https://xxxxxxxx.supabase.co — from Project Settings → API
-  SUPABASE_ANON_KEY: 'sb_publishable_dOCo-cAhFI4ja8mwZbPoEQ_sCBrj3EX',
+  SUPABASE_URL: 'https://nkiywhqolqhemumdgozl.supabase.co',
+  SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5raXl3aHFvbHFoZW11bWRnb3psIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgzMzY4NzksImV4cCI6MjEwMzkxMjg3OX0.fDSvXVtO0sq_-AWDUU2toh8ks4CAcCjviyFoTVE0oek',
 };
 
 // Loaded via the Supabase JS CDN script tag (see index.html <head>).
