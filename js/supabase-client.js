@@ -11,8 +11,8 @@
  */
 
 const NIWALA_CONFIG = {
-  SUPABASE_URL: 'YOUR_SUPABASE_PROJECT_URL',
-  SUPABASE_ANON_KEY: 'YOUR_SUPABASE_ANON_KEY',
+  SUPABASE_URL: 'YOUR_SUPABASE_PROJECT_URL', // e.g. https://xxxxxxxx.supabase.co — from Project Settings → API
+  SUPABASE_ANON_KEY: 'sb_publishable_dOCo-cAhFI4ja8mwZbPoEQ_sCBrj3EX',
 };
 
 // Loaded via the Supabase JS CDN script tag (see index.html <head>).

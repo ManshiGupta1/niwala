@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
@@ -23,10 +23,10 @@
       <a href="index.html" class="nav-logo">
         <!-- Wordmark logo: plate + steam concept, see docs/logo.md -->
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
-          <circle cx="15" cy="19" r="9" stroke="#B85C38" stroke-width="2"/>
-          <path d="M11 7c0 1.5 1.2 1.5 1.2 3S11 12.5 11 14" stroke="#D97745" stroke-width="1.6" stroke-linecap="round"/>
-          <path d="M15 6c0 1.5 1.2 1.5 1.2 3S15 11.5 15 13" stroke="#D97745" stroke-width="1.6" stroke-linecap="round"/>
-          <path d="M19 7c0 1.5 1.2 1.5 1.2 3S19 12.5 19 14" stroke="#D97745" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="15" cy="19" r="9" stroke="#7C2D12" stroke-width="2"/>
+          <path d="M11 7c0 1.5 1.2 1.5 1.2 3S11 12.5 11 14" stroke="#E4572E" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M15 6c0 1.5 1.2 1.5 1.2 3S15 11.5 15 13" stroke="#E4572E" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M19 7c0 1.5 1.2 1.5 1.2 3S19 12.5 19 14" stroke="#E4572E" stroke-width="1.6" stroke-linecap="round"/>
         </svg>
         NIWALA
       </a>
@@ -56,12 +56,72 @@
     <section class="hero">
       <div class="hero-media">
         <!--
-          Real cinematic kitchen video goes here. Structure kept
-          swap-ready:
+          Real cinematic kitchen video goes here eventually. Structure
+          kept swap-ready — drop this in and remove .hero-illustration:
           <video autoplay muted loop playsinline poster="assets/img/hero-poster.jpg">
             <source src="assets/video/hero-kitchen.mp4" type="video/mp4">
           </video>
         -->
+        <div class="hero-illustration" aria-hidden="true">
+          <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="duskGlow" cx="72%" cy="30%" r="60%">
+                <stop offset="0%" stop-color="#E8A93B" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#E8A93B" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="thaliShade" cx="50%" cy="42%" r="60%">
+                <stop offset="0%" stop-color="#FFF7E4"/>
+                <stop offset="100%" stop-color="#F1E4CD"/>
+              </radialGradient>
+            </defs>
+
+            <rect width="1200" height="800" fill="url(#duskGlow)"/>
+
+            <!-- spice-dust particles, animated via CSS -->
+            <g class="hero-spice-dust" fill="#E8A93B">
+              <circle cx="180" cy="160" r="3"/>
+              <circle cx="960" cy="120" r="2.5"/>
+              <circle cx="1040" cy="380" r="3.5"/>
+              <circle cx="120" cy="520" r="2"/>
+              <circle cx="760" cy="640" r="3"/>
+              <circle cx="300" cy="700" r="2.5"/>
+              <circle cx="1100" cy="620" r="2"/>
+            </g>
+
+            <!-- large thali, overhead angle, bottom-right of frame -->
+            <g transform="translate(720,360)">
+              <ellipse cx="0" cy="0" rx="360" ry="360" fill="url(#thaliShade)" opacity="0.96"/>
+              <ellipse cx="0" cy="0" rx="360" ry="360" fill="none" stroke="#E4572E" stroke-width="10"/>
+              <ellipse cx="0" cy="0" rx="300" ry="300" fill="none" stroke="#7C2D12" stroke-width="2" opacity="0.35"/>
+
+              <!-- rice mound -->
+              <ellipse cx="-110" cy="-40" rx="120" ry="95" fill="#F6E7C9"/>
+              <ellipse cx="-110" cy="-40" rx="120" ry="95" fill="none" stroke="#E8A93B" stroke-width="3" opacity="0.5"/>
+
+              <!-- dal katori -->
+              <circle cx="120" cy="-90" r="70" fill="#E8A93B"/>
+              <circle cx="120" cy="-90" r="70" fill="none" stroke="#7C2D12" stroke-width="4"/>
+
+              <!-- sabzi katori -->
+              <circle cx="150" cy="90" r="65" fill="#6B7F4F"/>
+              <circle cx="150" cy="90" r="65" fill="none" stroke="#7C2D12" stroke-width="4"/>
+
+              <!-- pickle / chutney -->
+              <circle cx="-40" cy="140" r="34" fill="#E4572E"/>
+
+              <!-- roti -->
+              <circle cx="-160" cy="120" r="55" fill="#EFD9A8"/>
+              <circle cx="-160" cy="120" r="55" fill="none" stroke="#C98A3B" stroke-width="2" stroke-dasharray="4 6"/>
+            </g>
+
+            <!-- second, smaller bowl top-left for depth -->
+            <g transform="translate(190,180)">
+              <circle cx="0" cy="0" r="120" fill="#7C2D12" opacity="0.9"/>
+              <circle cx="0" cy="0" r="120" fill="none" stroke="#E8A93B" stroke-width="4"/>
+              <ellipse cx="-10" cy="-20" rx="70" ry="45" fill="#E4572E" opacity="0.85"/>
+            </g>
+          </svg>
+        </div>
         <div class="hero-steam" aria-hidden="true"><span></span><span></span><span></span></div>
       </div>
 
@@ -148,11 +208,11 @@
             </ul>
             <a href="pages/cook/landing.html" class="btn btn-primary">Start Cooking With NIWALA</a>
           </div>
-          <div class="card" style="background: rgba(255,243,230,0.06); border-color: rgba(255,243,230,0.18); color: var(--color-cream)">
-            <p style="color: rgba(255,243,230,0.7); margin-bottom: var(--space-1)">Today's capacity</p>
+          <div class="card" style="background: rgba(241,228,205,0.06); border-color: rgba(241,228,205,0.18); color: var(--color-cream)">
+            <p style="color: rgba(241,228,205,0.7); margin-bottom: var(--space-1)">Today's capacity</p>
             <h3 style="color: var(--color-cream)">7 of 15 meals left</h3>
-            <div class="dish-line" style="border-color: rgba(255,243,230,0.2)"><span>Orders accepted</span><span>8</span></div>
-            <div class="dish-line" style="border-color: rgba(255,243,230,0.2)"><span>Today's earnings</span><span>₹1,240</span></div>
+            <div class="dish-line" style="border-color: rgba(241,228,205,0.2)"><span>Orders accepted</span><span>8</span></div>
+            <div class="dish-line" style="border-color: rgba(241,228,205,0.2)"><span>Today's earnings</span><span>₹1,240</span></div>
           </div>
         </div>
       </div>
@@ -190,6 +250,13 @@
                replaced by a Supabase query once auth/data land. -->
           <article class="cook-card">
             <div class="cook-card__media">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M20 55 a30 30 0 0 0 60 0 z" fill="#F1E4CD"/>
+                <ellipse cx="50" cy="55" rx="30" ry="7" fill="#E8A93B"/>
+                <path d="M38 30c0 4 4 4 4 8s-4 4-4 8" stroke="#F1E4CD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <path d="M50 26c0 4 4 4 4 8s-4 4-4 8" stroke="#F1E4CD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <path d="M62 30c0 4 4 4 4 8s-4 4-4 8" stroke="#F1E4CD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              </svg>
               <button class="cook-card__follow" data-follow-btn aria-pressed="false" aria-label="Follow Asha's Kitchen">♡</button>
             </div>
             <div class="cook-card__body">
@@ -202,6 +269,13 @@
 
           <article class="cook-card">
             <div class="cook-card__media">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="34" fill="none" stroke="#F1E4CD" stroke-width="3"/>
+                <circle cx="50" cy="50" r="26" fill="none" stroke="#F1E4CD" stroke-width="1.5" opacity="0.6"/>
+                <circle cx="38" cy="42" r="7" fill="#E8A93B"/>
+                <circle cx="62" cy="42" r="7" fill="#6B7F4F"/>
+                <circle cx="50" cy="62" r="9" fill="#F1E4CD"/>
+              </svg>
               <button class="cook-card__follow" data-follow-btn aria-pressed="false" aria-label="Follow Neha's Kitchen">♡</button>
             </div>
             <div class="cook-card__body">
@@ -214,6 +288,11 @@
 
           <article class="cook-card">
             <div class="cook-card__media">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M22 48 a28 28 0 0 0 56 0 z" fill="#F1E4CD"/>
+                <path d="M28 48c4-3 8 3 12 0s8-3 12 0 8-3 12 0 8-3 12 0" stroke="#E8A93B" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <ellipse cx="50" cy="48" rx="28" ry="6" fill="#7C2D12" opacity="0.15"/>
+              </svg>
               <button class="cook-card__follow" data-follow-btn aria-pressed="false" aria-label="Follow Meena's Rasoi">♡</button>
             </div>
             <div class="cook-card__body">
@@ -256,7 +335,7 @@
     <div class="container footer-grid">
       <div>
         <div class="nav-logo" style="color: var(--color-cream); margin-bottom: var(--space-2)">NIWALA</div>
-        <p style="color: rgba(255,243,230,0.7); font-size: var(--fs-small); max-width: 32ch;">Ghar ka khana, apne sheher ke cooks se. A marketplace for real home cooking.</p>
+        <p style="color: rgba(241,228,205,0.7); font-size: var(--fs-small); max-width: 32ch;">Ghar ka khana, apne sheher ke cooks se. A marketplace for real home cooking.</p>
       </div>
       <div>
         <h4>Company</h4>

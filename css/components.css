@@ -28,9 +28,9 @@
 .btn-ghost-light {
   background: transparent;
   color: var(--color-cream);
-  border: 1.5px solid rgba(255, 243, 230, 0.55);
+  border: 1.5px solid rgba(241, 228, 205, 0.55);
 }
-.btn-ghost-light:hover { background: rgba(255, 243, 230, 0.12); border-color: var(--color-cream); }
+.btn-ghost-light:hover { background: rgba(241, 228, 205, 0.12); border-color: var(--color-cream); }
 
 .btn-secondary {
   background: var(--color-surface);
@@ -46,7 +46,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 243, 230, 0.92);
+  background: rgba(241, 228, 205, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(58, 36, 27, 0.08);
 }
@@ -117,8 +117,15 @@
 .cook-card__media {
   position: relative;
   aspect-ratio: 4 / 3;
-  background: var(--gradient-sunset);
+  background:
+    radial-gradient(rgba(241, 228, 205, 0.14) 1.5px, transparent 1.5px),
+    var(--gradient-dusk);
+  background-size: 18px 18px, cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.cook-card__media svg { width: 56%; height: 56%; opacity: 0.95; }
 
 .cook-card__follow {
   position: absolute;
@@ -280,16 +287,16 @@
   display: block;
   padding-block: 0.35rem;
   font-size: var(--fs-small);
-  color: rgba(255, 243, 230, 0.75);
+  color: rgba(241, 228, 205, 0.75);
   transition: color var(--duration-fast) var(--ease-standard);
 }
 .footer-grid a:hover { color: var(--color-golden); }
 .footer-bottom {
   margin-top: var(--space-6);
   padding-top: var(--space-4);
-  border-top: 1px solid rgba(255, 243, 230, 0.15);
+  border-top: 1px solid rgba(241, 228, 205, 0.15);
   font-size: var(--fs-tiny);
-  color: rgba(255, 243, 230, 0.55);
+  color: rgba(241, 228, 205, 0.55);
 }
 @media (max-width: 860px) {
   .footer-grid { grid-template-columns: repeat(2, 1fr); }

@@ -1,56 +1,70 @@
 /* =========================================================
    NIWALA — Design Tokens
-   Sunset-inspired warm Indian home-food identity.
+   "Spice market at dusk" — a richer, more particular Indian
+   home-food identity than the default cream+terracotta look.
    ========================================================= */
 
 :root {
-  /* ---- Core palette (from brand spec) ---- */
-  --color-deep-brown: #3A241B;
-  --color-terracotta: #B85C38;
-  --color-burnt-orange: #D97745;
-  --color-warm-coral: #E98B73;
-  --color-peach: #F4B6A1;
-  --color-cream: #FFF3E6;
-  --color-golden: #E6A85C;
-  --color-soft-beige: #F7E3D0;
-  --color-charcoal: #292321;
+  /* ---- Core palette ---- */
+  --color-ink: #211512;            /* near-black, warm — body text, dark panels */
+  --color-maroon: #7C2D12;         /* deep sindoor/dried-chili red — primary brand color */
+  --color-vermillion: #E4572E;     /* vivid accent — CTAs, highlights */
+  --color-turmeric: #E8A93B;       /* gold — capacity indicators, secondary accent */
+  --color-sage: #6B7F4F;           /* fresh green — veg cues, success states */
+  --color-parchment: #F1E4CD;      /* warm kraft-paper background, not generic cream */
+  --color-parchment-deep: #E7D3AC; /* darker paper tone for alt sections */
+  --color-panel: #FFFBF3;          /* card surface, slightly lighter than bg */
   --color-white: #FFFFFF;
 
   /* ---- Semantic roles ---- */
-  --color-bg: var(--color-cream);
-  --color-surface: var(--color-white);
-  --color-surface-alt: var(--color-soft-beige);
-  --color-text: var(--color-charcoal);
-  --color-text-muted: #6B5A4E;
-  --color-text-on-dark: var(--color-cream);
-  --color-border: #E7D3BE;
+  --color-bg: var(--color-parchment);
+  --color-surface: var(--color-panel);
+  --color-surface-alt: var(--color-parchment-deep);
+  --color-text: var(--color-ink);
+  --color-text-muted: #6E5C4E;
+  --color-text-on-dark: var(--color-parchment);
+  --color-border: #DDC49B;
 
-  --color-primary: var(--color-terracotta);
-  --color-primary-hover: #A34F30;
-  --color-accent: var(--color-golden);
-  --color-success: #4C8B5B;
-  --color-danger: #C0472E;
+  --color-primary: var(--color-maroon);
+  --color-primary-hover: #5E2109;
+  --color-accent: var(--color-vermillion);
+  --color-gold: var(--color-turmeric);
+  --color-success: #4B6B36;
+  --color-danger: #B3401F;
   --color-info: #3A6B8A;
 
-  /* Sunset gradient, used sparingly (hero overlay, key CTAs) */
-  --gradient-sunset: linear-gradient(
+  /* Dusk gradient — deep ink through maroon and vermillion to gold,
+     used sparingly (hero, key panels), never as a page background wash. */
+  --gradient-dusk: linear-gradient(
     135deg,
-    var(--color-deep-brown) 0%,
-    var(--color-terracotta) 34%,
-    var(--color-burnt-orange) 58%,
-    var(--color-peach) 82%,
-    var(--color-cream) 100%
+    var(--color-ink) 0%,
+    var(--color-maroon) 38%,
+    var(--color-vermillion) 68%,
+    var(--color-turmeric) 100%
   );
   --gradient-hero-overlay: linear-gradient(
     180deg,
-    rgba(58, 36, 27, 0.72) 0%,
-    rgba(58, 36, 27, 0.45) 45%,
-    rgba(58, 36, 27, 0.85) 100%
+    rgba(33, 21, 18, 0.78) 0%,
+    rgba(33, 21, 18, 0.38) 45%,
+    rgba(33, 21, 18, 0.88) 100%
   );
 
   /* ---- Type ---- */
   --font-display: 'Fraunces', 'Georgia', serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ---- Legacy aliases (Stage 1 token names, kept so existing
+     component rules pick up the new palette automatically) ---- */
+  --color-deep-brown: var(--color-ink);
+  --color-terracotta: var(--color-maroon);
+  --color-burnt-orange: var(--color-vermillion);
+  --color-warm-coral: var(--color-vermillion);
+  --color-peach: var(--color-turmeric);
+  --color-cream: var(--color-parchment);
+  --color-golden: var(--color-turmeric);
+  --color-soft-beige: var(--color-parchment-deep);
+  --color-charcoal: var(--color-ink);
+  --gradient-sunset: var(--gradient-dusk);
 
   --fs-display-xl: clamp(2.75rem, 5vw + 1rem, 5rem);
   --fs-display-lg: clamp(2.25rem, 3.5vw + 1rem, 3.5rem);
