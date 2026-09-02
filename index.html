@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIWALA — Ghar ka khana, apne sheher ke cooks se</title>
+  <meta name="description" content="NIWALA connects you with local home cooks making fresh, home-style meals in limited daily batches. Discover, order, and support cooking talent in your city." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="nav-logo">
+        <!-- Wordmark logo: plate + steam concept, see docs/logo.md -->
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+          <circle cx="15" cy="19" r="9" stroke="#B85C38" stroke-width="2"/>
+          <path d="M11 7c0 1.5 1.2 1.5 1.2 3S11 12.5 11 14" stroke="#D97745" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M15 6c0 1.5 1.2 1.5 1.2 3S15 11.5 15 13" stroke="#D97745" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M19 7c0 1.5 1.2 1.5 1.2 3S19 12.5 19 14" stroke="#D97745" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        NIWALA
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#how-it-works">How it works</a>
+        <a href="#cooks">Explore cooks</a>
+        <a href="pages/cook/landing.html">Become a cook</a>
+        <a href="pages/delivery/landing.html">Delivery partners</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="pages/auth/login.html" class="btn btn-secondary btn-sm">Log in</a>
+        <a href="pages/auth/signup.html" class="btn btn-primary btn-sm">Sign up</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M2 5h16M2 10h16M2 15h16" stroke="#3A241B" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-media">
+        <!--
+          Real cinematic kitchen video goes here. Structure kept
+          swap-ready:
+          <video autoplay muted loop playsinline poster="assets/img/hero-poster.jpg">
+            <source src="assets/video/hero-kitchen.mp4" type="video/mp4">
+          </video>
+        -->
+        <div class="hero-steam" aria-hidden="true"><span></span><span></span><span></span></div>
+      </div>
+
+      <div class="container hero-content">
+        <p class="hero-eyebrow">Home cooks, near you</p>
+        <h1 class="hero-wordmark">NIWALA</h1>
+        <p class="hero-tagline">Ghar ka khana. Apne sheher ke cooks se.</p>
+        <p class="hero-desc">Discover fresh, home-style meals prepared by local cooks in limited daily batches — no cloud kitchens, no assembly lines, just someone's actual kitchen.</p>
+
+        <div class="hero-ctas">
+          <a href="#cooks" class="btn btn-primary">Explore Home Food</a>
+          <a href="pages/cook/landing.html" class="btn btn-ghost-light">Become a Cook</a>
+          <a href="pages/delivery/landing.html" class="btn btn-ghost-light">Become a Delivery Partner</a>
+        </div>
+
+        <p class="hero-trust">
+          <span>🍲 Freshly prepared</span>
+          <span>📍 Local cooks</span>
+          <span>⏳ Limited daily batches</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-heading">
+          <h2>How NIWALA works</h2>
+          <p>Three simple steps between a home cook's kitchen and your table.</p>
+        </div>
+        <div class="grid-3">
+          <div class="step">
+            <span class="step-index">01</span>
+            <h3>Discover</h3>
+            <p>Find home cooks and today's dishes around you, filtered by cuisine, distance, and price.</p>
+          </div>
+          <div class="step">
+            <span class="step-index">02</span>
+            <h3>Order</h3>
+            <p>Choose today's menu and reserve a meal — while the cook still has capacity left.</p>
+          </div>
+          <div class="step">
+            <span class="step-index">03</span>
+            <h3>Enjoy</h3>
+            <p>Get fresh, home-style food delivered to your doorstep, tracked from kitchen to door.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOR CUSTOMERS ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="promo-panel">
+          <div>
+            <h2>Tired of eating restaurant food every day?</h2>
+            <p>NIWALA helps you discover local home cooks and fresh daily meals — the kind you'd get at a friend's house, not a kitchen built for volume.</p>
+            <a href="#cooks" class="btn btn-primary">Find Food Near You</a>
+          </div>
+          <div class="card">
+            <div class="cook-card__meta"><span class="rating">⭐ 4.8</span><span>North Indian • 1.4 km away</span></div>
+            <h3 style="margin-bottom: var(--space-2)">Asha's Kitchen</h3>
+            <div class="dish-line"><span>Rajma Chawal</span><span>₹120</span></div>
+            <div class="dish-line"><span>Dal Tadka</span><span>₹90</span></div>
+            <span class="badge badge-available" style="margin-top: var(--space-2)">🟢 4 slots remaining</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOR COOKS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="promo-panel dark">
+          <div>
+            <p class="hero-eyebrow" style="color: var(--color-golden)">For home cooks</p>
+            <h2>Your cooking can become your income.</h2>
+            <p>Create your own menu, decide how much you want to cook, choose your availability, and earn without running a full restaurant.</p>
+            <ul>
+              <li>Set your menu</li>
+              <li>Set your daily capacity</li>
+              <li>Accept only the orders you want</li>
+              <li>Earn flexibly</li>
+            </ul>
+            <a href="pages/cook/landing.html" class="btn btn-primary">Start Cooking With NIWALA</a>
+          </div>
+          <div class="card" style="background: rgba(255,243,230,0.06); border-color: rgba(255,243,230,0.18); color: var(--color-cream)">
+            <p style="color: rgba(255,243,230,0.7); margin-bottom: var(--space-1)">Today's capacity</p>
+            <h3 style="color: var(--color-cream)">7 of 15 meals left</h3>
+            <div class="dish-line" style="border-color: rgba(255,243,230,0.2)"><span>Orders accepted</span><span>8</span></div>
+            <div class="dish-line" style="border-color: rgba(255,243,230,0.2)"><span>Today's earnings</span><span>₹1,240</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOR DELIVERY PARTNERS ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="promo-panel">
+          <div>
+            <p class="hero-eyebrow">For delivery partners</p>
+            <h2>Earn on your schedule.</h2>
+            <p>Choose nearby delivery jobs and see the gig amount before you accept — no surprises, no obligations.</p>
+            <a href="pages/delivery/landing.html" class="btn btn-primary">Become a Delivery Partner</a>
+          </div>
+          <div class="card">
+            <p style="color: var(--color-text-muted); margin-bottom: var(--space-1)">Delivery #NW10245</p>
+            <div class="dish-line"><span>Pickup — Neha's Kitchen</span><span>1.2 km</span></div>
+            <div class="dish-line"><span>Drop — ABC Corporate Park</span><span>2.8 km</span></div>
+            <div class="dish-line"><span><strong>Your gig</strong></span><span><strong>₹35</strong></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED COOKS ============ -->
+    <section class="section" id="cooks">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Featured home cooks</h2>
+          <p>A few kitchens cooking near you right now.</p>
+        </div>
+        <div class="grid-3" id="featured-cooks-grid">
+          <!-- Cards rendered here; static markup for now, will be
+               replaced by a Supabase query once auth/data land. -->
+          <article class="cook-card">
+            <div class="cook-card__media">
+              <button class="cook-card__follow" data-follow-btn aria-pressed="false" aria-label="Follow Asha's Kitchen">♡</button>
+            </div>
+            <div class="cook-card__body">
+              <h3 style="font-size: var(--fs-body-lg); margin-bottom: 0.25rem">Asha's Kitchen</h3>
+              <div class="cook-card__meta"><span class="rating">⭐ 4.8</span><span>North Indian • 1.4 km</span></div>
+              <p style="font-size: var(--fs-small); margin-bottom: var(--space-2)">Today's special: Rajma Chawal — ₹120</p>
+              <span class="badge badge-available">🟢 4 slots remaining</span>
+            </div>
+          </article>
+
+          <article class="cook-card">
+            <div class="cook-card__media">
+              <button class="cook-card__follow" data-follow-btn aria-pressed="false" aria-label="Follow Neha's Kitchen">♡</button>
+            </div>
+            <div class="cook-card__body">
+              <h3 style="font-size: var(--fs-body-lg); margin-bottom: 0.25rem">Neha's Kitchen <span class="badge badge-verified" style="margin-left:4px">✓ Verified</span></h3>
+              <div class="cook-card__meta"><span class="rating">⭐ 4.8</span><span>North Indian • 126 reviews</span></div>
+              <p style="font-size: var(--fs-small); margin-bottom: var(--space-2)">Today's special: Veg Thali — ₹130</p>
+              <span class="badge badge-available">🟢 3 plates remaining</span>
+            </div>
+          </article>
+
+          <article class="cook-card">
+            <div class="cook-card__media">
+              <button class="cook-card__follow" data-follow-btn aria-pressed="false" aria-label="Follow Meena's Rasoi">♡</button>
+            </div>
+            <div class="cook-card__body">
+              <h3 style="font-size: var(--fs-body-lg); margin-bottom: 0.25rem">Meena's Rasoi</h3>
+              <div class="cook-card__meta"><span class="rating">⭐ 4.6</span><span>Gujarati • 2.1 km</span></div>
+              <p style="font-size: var(--fs-small); margin-bottom: var(--space-2)">Today's special: Kadhi Chawal — ₹100</p>
+              <span class="badge badge-soldout">SOLD OUT FOR TODAY</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>What customers are saying</h2>
+        </div>
+        <div class="grid-3">
+          <div class="testimonial">
+            <blockquote>"Finally, food that tastes like someone actually cares. Asha's rajma chawal is now a weekly ritual."</blockquote>
+            <cite>— Priya S., Jaipur</cite>
+          </div>
+          <div class="testimonial">
+            <blockquote>"I love that I can see exactly how many plates are left. It feels honest, not like a queue into nowhere."</blockquote>
+            <cite>— Karan M., Jaipur</cite>
+          </div>
+          <div class="testimonial">
+            <blockquote>"Started following three cooks near my office. Lunch decisions got a lot easier."</blockquote>
+            <cite>— Ritu D., Jaipur</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="nav-logo" style="color: var(--color-cream); margin-bottom: var(--space-2)">NIWALA</div>
+        <p style="color: rgba(255,243,230,0.7); font-size: var(--fs-small); max-width: 32ch;">Ghar ka khana, apne sheher ke cooks se. A marketplace for real home cooking.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#" data-coming-soon="About page is coming soon.">About NIWALA</a>
+        <a href="#" data-coming-soon="Contact page is coming soon.">Contact</a>
+      </div>
+      <div>
+        <h4>Earn with us</h4>
+        <a href="pages/cook/landing.html">Become a Cook</a>
+        <a href="pages/delivery/landing.html">Become a Delivery Partner</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#" data-coming-soon="Help Center is coming soon.">Help Center</a>
+        <a href="#" data-coming-soon="Food Safety page is coming soon.">Food Safety</a>
+        <a href="#" data-coming-soon="Refund Policy is coming soon.">Refund Policy</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#" data-coming-soon="Terms are coming soon.">Terms</a>
+        <a href="#" data-coming-soon="Privacy Policy is coming soon.">Privacy</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      © 2026 NIWALA. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

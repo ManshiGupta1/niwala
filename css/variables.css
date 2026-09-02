@@ -1,0 +1,102 @@
+/* =========================================================
+   NIWALA — Design Tokens
+   Sunset-inspired warm Indian home-food identity.
+   ========================================================= */
+
+:root {
+  /* ---- Core palette (from brand spec) ---- */
+  --color-deep-brown: #3A241B;
+  --color-terracotta: #B85C38;
+  --color-burnt-orange: #D97745;
+  --color-warm-coral: #E98B73;
+  --color-peach: #F4B6A1;
+  --color-cream: #FFF3E6;
+  --color-golden: #E6A85C;
+  --color-soft-beige: #F7E3D0;
+  --color-charcoal: #292321;
+  --color-white: #FFFFFF;
+
+  /* ---- Semantic roles ---- */
+  --color-bg: var(--color-cream);
+  --color-surface: var(--color-white);
+  --color-surface-alt: var(--color-soft-beige);
+  --color-text: var(--color-charcoal);
+  --color-text-muted: #6B5A4E;
+  --color-text-on-dark: var(--color-cream);
+  --color-border: #E7D3BE;
+
+  --color-primary: var(--color-terracotta);
+  --color-primary-hover: #A34F30;
+  --color-accent: var(--color-golden);
+  --color-success: #4C8B5B;
+  --color-danger: #C0472E;
+  --color-info: #3A6B8A;
+
+  /* Sunset gradient, used sparingly (hero overlay, key CTAs) */
+  --gradient-sunset: linear-gradient(
+    135deg,
+    var(--color-deep-brown) 0%,
+    var(--color-terracotta) 34%,
+    var(--color-burnt-orange) 58%,
+    var(--color-peach) 82%,
+    var(--color-cream) 100%
+  );
+  --gradient-hero-overlay: linear-gradient(
+    180deg,
+    rgba(58, 36, 27, 0.72) 0%,
+    rgba(58, 36, 27, 0.45) 45%,
+    rgba(58, 36, 27, 0.85) 100%
+  );
+
+  /* ---- Type ---- */
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-display-xl: clamp(2.75rem, 5vw + 1rem, 5rem);
+  --fs-display-lg: clamp(2.25rem, 3.5vw + 1rem, 3.5rem);
+  --fs-display-md: clamp(1.75rem, 2vw + 1rem, 2.5rem);
+  --fs-heading: clamp(1.375rem, 1.2vw + 1rem, 1.75rem);
+  --fs-body-lg: 1.125rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-tiny: 0.75rem;
+
+  --lh-tight: 1.15;
+  --lh-snug: 1.35;
+  --lh-normal: 1.6;
+
+  /* ---- Spacing scale (8px base) ---- */
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+  --space-8: 6.5rem;
+
+  /* ---- Shape / elevation ---- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 6px 20px -8px rgba(58, 36, 27, 0.18);
+  --shadow-lift: 0 16px 40px -12px rgba(58, 36, 27, 0.28);
+
+  --border-thin: 1px solid var(--color-border);
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+
+  /* ---- Layout ---- */
+  --content-max: 1200px;
+  --content-narrow: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Reserved for future dark-mode support; light warm theme is the
+     brand default and is not overridden automatically. */
+}

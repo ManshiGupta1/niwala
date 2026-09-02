@@ -1,0 +1,90 @@
+/* =========================================================
+   NIWALA — Base / Reset
+   ========================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, video, svg { display: block; max-width: 100%; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: var(--lh-tight);
+  margin: 0 0 var(--space-2);
+  color: var(--color-deep-brown);
+  font-weight: 600;
+}
+
+h1 { font-size: var(--fs-display-lg); }
+h2 { font-size: var(--fs-display-md); }
+h3 { font-size: var(--fs-heading); }
+
+p { margin: 0 0 var(--space-3); color: var(--color-text-muted); }
+
+a { color: inherit; text-decoration: none; }
+
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button { cursor: pointer; border: none; background: none; }
+
+/* Visible keyboard focus everywhere, incl. custom components */
+:focus-visible {
+  outline: 2px solid var(--color-burnt-orange);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.container {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-3);
+  top: -60px;
+  background: var(--color-deep-brown);
+  color: var(--color-cream);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  z-index: 1000;
+  transition: top var(--duration-base) var(--ease-standard);
+}
+.skip-link:focus { top: var(--space-3); }
